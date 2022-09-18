@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "oB5MB5XNq3rYdBCZxdYR8wpI/T5vaebiSnl8P66n64Z8VZearjjne6TDUoxRziyf/rEhRR/To+0TL+27n//31A==",
+  "dgSpecHash": "ufBN9XHmuNtRiF23C0hGkfDgU3iA1sbGI/RHUmmBtJzl/2TMu/CX8kEMxx6uAVCY0xYp3cCp1ZmmqC70o+Qrbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\carlos.mayer\\documents\\EcommerceTrabalho\\EcommerceTrabalho.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\carlos.mayer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.17\\microsoft.data.sqlite.core.5.0.17.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
+    "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.17\\microsoft.entityframeworkcore.design.5.0.17.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.17\\microsoft.entityframeworkcore.relational.5.0.17.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\5.0.17\\microsoft.entityframeworkcore.sqlite.5.0.17.nupkg.sha512",
     "C:\\Users\\carlos.mayer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\5.0.17\\microsoft.entityframeworkcore.sqlite.core.5.0.17.nupkg.sha512",
