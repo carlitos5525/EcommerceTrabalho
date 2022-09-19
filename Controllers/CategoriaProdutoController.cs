@@ -50,7 +50,45 @@ namespace EcommerceTrabalho.Controllers
             return NotFound();
 
         }
-    }
 
+        [HttpDelete]
+        [Route("excluir/{id}")]
+        public IActionResult Excluir([FromRoute] int id)
+        {
+            foreach (var categoria in _context.Categorias.ToList())
+            {
+                if (categoria.Id == id)
+                {
+                    _context.Categorias.Remove(categoria);
+                    _context.SaveChanges();
+                    return Ok(categoria);
+                }
+
+            }
+
+            return NotFound();
+        }
+
+        [HttpPatch]
+        [Route("editar")]
+        public IActionResult Editar([FromBody] CategoriaProduto categoria)
+        {
+            foreach (var categoria_cadastrada in _context.Categorias.ToList())
+            {
+                if (categoria_cadastrada.Id == categoria.Id)
+                {
+                    categoria_cadastrada.Nome = categoria.Nome;
+                    categoria_cadastrada.Descricao = categoria.Descricao;
+                    _context.Categorias.Update(categoria_cadastrada);
+                    _context.SaveChanges();
+                    return Ok(categoria_cadastrada);
+                }
+
+            }
+
+            return NotFound();
+        }
+
+    }
 
 }
