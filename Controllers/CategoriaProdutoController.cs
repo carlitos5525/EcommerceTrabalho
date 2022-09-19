@@ -34,6 +34,22 @@ namespace EcommerceTrabalho.Controllers
             return Created("", categoria);
         }
 
+        [HttpGet]
+        [Route("buscar/{id}")]
+        public IActionResult Buscar([FromRoute] int Id)
+        {
+
+            foreach (CategoriaProduto categoria in _context.Categorias.ToList())
+            {
+                if (categoria.Id == Id)
+                {
+                    return Ok(categoria);
+                }
+            }
+
+            return NotFound();
+
+        }
     }
 
 
