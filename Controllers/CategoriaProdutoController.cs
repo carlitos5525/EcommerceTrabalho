@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using FolhaPagamento.Models.Funcionario;
+using EcommerceTrabalho.Models;
 
 namespace EcommerceTrabalho.Controllers
 {
@@ -9,6 +9,12 @@ namespace EcommerceTrabalho.Controllers
     [ApiController]
     public class CategoriaProdutoController : ControllerBase
     {
+        //injeção de dependecia
+        private readonly DataContext _context;
+        public CategoriaProdutoController(DataContext context)
+        {
+            _context = context;
+        }
 
 
     }
