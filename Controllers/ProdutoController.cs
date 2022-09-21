@@ -18,6 +18,21 @@ namespace EcommerceTrabalho.Controllers
             _context = context;
         }
 
+        [HttpPost]
+        [Route("cadastrar")]
+        public IActionResult Cadastrar([FromBody] Produto produto)
+        {
+            _context.Produtos.Add(produto);
+            _context.SaveChanges();
+            return Created("", produto);
+        }
 
+        [HttpGet]
+        [Route("listar")]
+        public IActionResult Listar()
+        {
+            return Ok(_context.Produtos.Include(p => p.CategoriaProduto).ToList());
+
+        }
     }
 }
