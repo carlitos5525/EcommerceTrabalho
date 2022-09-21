@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using EcommerceTrabalho.Models;
+using System.Data;
 using System.Linq;
 
 namespace EcommerceTrabalho.Controllers

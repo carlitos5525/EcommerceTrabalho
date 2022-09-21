@@ -29,8 +29,7 @@ namespace EcommerceTrabalho.Migrations
                     Nome = table.Column<string>(type: "TEXT", nullable: true),
                     Preco = table.Column<float>(type: "REAL", nullable: false),
                     Descricao = table.Column<string>(type: "TEXT", nullable: true),
-                    IdCategoriaProduto = table.Column<int>(type: "INTEGER", nullable: false),
-                    CategoriaProdutoId = table.Column<int>(type: "INTEGER", nullable: true)
+                    CategoriaProdutoId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -40,7 +39,7 @@ namespace EcommerceTrabalho.Migrations
                         column: x => x.CategoriaProdutoId,
                         principalTable: "Categorias",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

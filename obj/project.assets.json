@@ -1256,19 +1256,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eduardo\\.nuget\\packages\\": {}
+    "C:\\Users\\carlos.mayer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eduardo\\ECOMMERCETRABALHO\\EcommerceTrabalho.csproj",
+      "projectUniqueName": "C:\\Users\\carlos.mayer\\documents\\EcommerceTrabalho\\EcommerceTrabalho.csproj",
       "projectName": "EcommerceTrabalho",
-      "projectPath": "C:\\Users\\Eduardo\\ECOMMERCETRABALHO\\EcommerceTrabalho.csproj",
-      "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eduardo\\ECOMMERCETRABALHO\\obj\\",
+      "projectPath": "C:\\Users\\carlos.mayer\\documents\\EcommerceTrabalho\\EcommerceTrabalho.csproj",
+      "packagesPath": "C:\\Users\\carlos.mayer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carlos.mayer\\documents\\EcommerceTrabalho\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\carlos.mayer\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1329,7 +1329,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,6 +8,5 @@ namespace EcommerceTrabalho.Models
         public int Id {get; set;}
         public String Nome {get; set;}
         public String Descricao {get; set;}
-        public virtual ICollection<Produto> Produtos {get; set;}
     }
 }
