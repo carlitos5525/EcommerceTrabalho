@@ -32,7 +32,21 @@ namespace EcommerceTrabalho.Controllers
         public IActionResult Listar()
         {
             return Ok(_context.Produtos.Include(p => p.CategoriaProduto).ToList());
+        }
 
+        [HttpGet]
+        [Route("buscar/{id}")]
+        public IActionResult Buscar([FromRoute] int Id)
+        {
+            foreach (Produto produto in _context.Produtos.ToList())
+            {
+                if (produto.Id == Id)
+                {
+                    return Ok(produto);
+                }
+            }
+
+            return NotFound();
         }
     }
 }
