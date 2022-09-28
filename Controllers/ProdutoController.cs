@@ -49,7 +49,6 @@ namespace EcommerceTrabalho.Controllers
             return NotFound();
         }
 
-        
         [HttpDelete]
         [Route("excluir/{id}")]
         public IActionResult Excluir([FromRoute] int id)
@@ -61,6 +60,25 @@ namespace EcommerceTrabalho.Controllers
                     _context.Produtos.Remove(produto);
                     _context.SaveChanges();
                     return Ok(produto);
+                }
+            }
+
+            return NotFound();
+        }
+
+        [HttpPatch]
+        [Route("editar")]
+        public IActionResult Editar([FromBody] Produto produto)
+        {
+            foreach (var produto_cadastrado in _context.Produtos.ToList())
+            {
+                if (produto_cadastrado.Id == produto.Id)
+                {
+                    produto_cadastrado.Nome = produto.Nome;
+                    produto_cadastrado.Descricao = produto.Descricao;
+                    _context.Produtos.Update(produto_cadastrado);
+                    _context.SaveChanges();
+                    return Ok(produto_cadastrado);
                 }
             }
 
