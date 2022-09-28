@@ -48,5 +48,23 @@ namespace EcommerceTrabalho.Controllers
 
             return NotFound();
         }
+
+        
+        [HttpDelete]
+        [Route("excluir/{id}")]
+        public IActionResult Excluir([FromRoute] int id)
+        {
+            foreach (var produto in _context.Produtos.ToList())
+            {
+                if (produto.Id == id)
+                {
+                    _context.Produtos.Remove(produto);
+                    _context.SaveChanges();
+                    return Ok(produto);
+                }
+            }
+
+            return NotFound();
+        }
     }
 }
