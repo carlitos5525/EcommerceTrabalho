@@ -38,7 +38,7 @@ namespace EcommerceTrabalho.Controllers
         [Route("buscar/{id}")]
         public IActionResult Buscar([FromRoute] int Id)
         {
-            foreach (Produto produto in _context.Produtos.ToList())
+            foreach (Produto produto in _context.Produtos.Include(p => p.CategoriaProduto).ToList())
             {
                 if (produto.Id == Id)
                 {
@@ -76,6 +76,7 @@ namespace EcommerceTrabalho.Controllers
                 {
                     produto_cadastrado.Nome = produto.Nome;
                     produto_cadastrado.Descricao = produto.Descricao;
+                    produto_cadastrado.CategoriaProdutoId = produto.CategoriaProdutoId;
                     _context.Produtos.Update(produto_cadastrado);
                     _context.SaveChanges();
                     return Ok(produto_cadastrado);
