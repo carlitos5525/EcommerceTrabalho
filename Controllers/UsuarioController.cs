@@ -18,7 +18,7 @@ namespace EcommerceTrabalho.Controllers
             _context = context;
         }
 
-         [HttpPost]
+        [HttpPost]
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Usuario usuario)
         {
@@ -27,6 +27,46 @@ namespace EcommerceTrabalho.Controllers
             return Created("", usuario);
         }
 
-        
+        [HttpPost]
+        [Route("logar")]
+        public IActionResult Logar([FromBody] Usuario usuario)
+        {
+            var usuario_encontrado = _context.Usuarios.FirstOrDefault(
+                f => f.Login == usuario.Login && f.Senha == usuario.Senha
+            );
+
+            if(usuario_encontrado == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                usuario_encontrado.IsLogged = true;
+                _context.Usuarios.Update(usuario_encontrado);
+                _context.SaveChanges();
+                return Ok();
+            }
+        }
+
+        [HttpPost]
+        [Route("deslogar")]
+        public IActionResult Deslogar([FromBody] Usuario usuario)
+        {
+             var usuario_encontrado = _context.Usuarios.FirstOrDefault(
+                f => f.Login == usuario.Login && f.Senha == usuario.Senha
+            );
+
+            if(usuario_encontrado == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                usuario_encontrado.IsLogged = false;
+                _context.Usuarios.Update(usuario_encontrado);
+                _context.SaveChanges();
+                return Ok();
+            }
+        }
     }
 }
