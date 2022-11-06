@@ -75,6 +75,10 @@ namespace EcommerceTrabalho.Controllers
             {
                 return NotFound();
             }
+            else if(carrinho_encontrado.IsPaid == true)
+            {
+                return NotFound("O carrinho já foi pago");
+            }
             else
             {
                 return Ok(carrinho_encontrado);
